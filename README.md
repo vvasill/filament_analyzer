@@ -11,6 +11,8 @@ A simple analyzer for filamentation images / Анализатор попереч
 	
 	python f_a.py ./data/examples
 
+Результат работы программы:
+
 Файлы с "зашкалом" перемещаются в директорию ./overscaled/;
 файлы с недостаточным сигналом — ./weak/
 
