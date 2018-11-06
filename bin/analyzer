@@ -1,0 +1,5 @@
+ #!/usr/bin/env python3
+
+import f_a
+
+print('Package {} is imported, version is {}'.format(f_a.name, f_a.version))
