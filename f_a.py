@@ -16,7 +16,7 @@ filenames_txt = glob.glob('*_*.txt')
 filenames_png = glob.glob('*_*.png')
 
 #params setting
-MAX_VAL = 1023
+MAX_VAL = 1022
 
 #analyzer
 for filename in filenames_txt:
@@ -33,7 +33,7 @@ for filename in filenames_txt:
 		for f_n in filenames_png:
 			f_name_png = f_n.split(".png")[0]
 			f_png_params = f_name_png.split('_')[:]
-			if (f_name_png_params[1:3] == f_params[0:2]):
+			if (f_png_params[1:3] == f_params[0:2]):
 				os.rename(f_n, 'overscaled/' + f_n)
 				break
 	else:
