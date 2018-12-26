@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+#test.py
 import sys, glob, os
 import numpy as np
 import scipy as sp
@@ -5,7 +7,7 @@ import matplotlib as mpl
 import matplotlib.pyplot as plt
 import struct
 
-from f_a import filter_over_weak, lumin_clean
+import filamentyzer
 
 #setup filenames
 path = sys.argv[1]
@@ -23,9 +25,6 @@ if (mode == "1"):
 
 	filter_over_weak(filenames_txt, filenames_png)
 
-	if (os.path.isdir('weak') == False):
-		os.makedirs('weak')
-
 if (mode == "2"):
 	#clean and print luminescence images
 	if (os.path.isdir('out') == False):
@@ -35,4 +34,3 @@ if (mode == "2"):
 	filenames_dat = glob.glob('*_*.txt')
 
 	lumin_clean(filenames_dat)
-

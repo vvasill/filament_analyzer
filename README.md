@@ -37,7 +37,7 @@ A simple analyzer for filamentation images / Анализатор изображ
 
 ----------------------------------------
 
-Исполнитель: Василий Пушкарев, 532 группа
+Исполнитель: Василий Пушкарев
 
 Постановка задачи: Д.В. Пушкарев, кафедра общей физики и волновых процессов,
 [puschkarev.dmitriy@physics.msu.ru](puschkarev.dmitriy@physics.msu.ru) 

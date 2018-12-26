@@ -1,8 +1,10 @@
- #!/usr/bin/env python3
- 
-from setuptools import find_packages, setup
+#!/usr/bin/env python3
 
-packagename = 'filament_analyzer'
+from filamentyzer import __version__
+from setuptools import setup, find_packages
+import sys
+
+packagename = 'filamentyzer'
 
 with open('README.md') as fh:
 	long_description = fh.read()
@@ -12,7 +14,7 @@ with open(os.path.join(here, 'requirements.txt')) as f:
 
 setup(
     name = packagename,
-    version = '0.0.1'
+    version = __version__
     license = 'MIT',
     author = 'Vasilii Pushkarev',
     author_email='pushkarev.vv14@physics.msu.ru',
