@@ -7,31 +7,21 @@ import matplotlib as mpl
 import matplotlib.pyplot as plt
 import struct
 
-import filamentyzer
-print('Package {} is imported, version is {}'.format(filamentyzer.name, filamentyzer.version))
+#import filamentyzer
+from filamentyzer import *
+#print('Package {} is imported, version is {}'.format(filamentyzer.name, filamentyzer.version))
 
 #setup filenames
 path = sys.argv[1]
-mode = sys.argv[2]
 os.chdir(path)
 
-if (mode == "1"):
-	#analyzer
-	if (os.path.isdir('weak') == False):
-		os.makedirs('weak')
-	if (os.path.isdir('overscaled') == False):
-		os.makedirs('overscaled')
-	filenames_txt = glob.glob('*_*.txt')
-	filenames_png = glob.glob('*_*.png')
+#analyzer
+if (os.path.isdir('weak') == False):
+	os.makedirs('weak')
+if (os.path.isdir('overscaled') == False):
+	os.makedirs('overscaled')
+filenames_txt = glob.glob('*_*.txt')
+filenames_png = glob.glob('*_*.png')
 
-	filter_over_weak(filenames_txt, filenames_png)
+filter_over_weak(filenames_txt, filenames_png)
 
-if (mode == "2"):
-	#clean and print luminescence images
-	if (os.path.isdir('out') == False):
-		os.makedirs('out')
-		if (os.path.isdir('images') == False):
-			os.makedirs('images')
-	filenames_dat = glob.glob('*_*.txt')
-
-	lumin_clean(filenames_dat)
