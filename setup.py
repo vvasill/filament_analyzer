@@ -14,20 +14,20 @@ with open(os.path.join(here, 'requirements.txt')) as f:
 
 setup(
     name = packagename,
-    version = __version__
+    version = __version__,
     license = 'MIT',
     author = 'Vasilii Pushkarev',
     author_email='pushkarev.vv14@physics.msu.ru',
     description = 'A simple analyzer for filamentation images',
 	long_description = long_description,
     packages = find_packages(),
-    scripts = ['bin/analyzer'],
+    scripts = ['bin/test.py'],
     data_files = [
-        ('doc',  ['doc/course_abstract.docx']),
+        ('doc',  ['doc/filament_analyzer.filamentyzer.html']),
      ],
      install_requires = install_requires,
-     test_suite = 'scientific_python.e_testing.test_suite',
-     keywords = 'science',
+     test_suite = 'test',
+     keywords = 'science, filament, analyzer',
 )
 
 if __name__ == '__main__':

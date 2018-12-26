@@ -1,10 +1,10 @@
+#!/usr/bin/env python3
 #f_a.py
 """
 An analyzer module: \
 filter for overscaled and weak images \
 and luminiscence images cleaning procedure
 """
-__version__ = '0.0.2'
 
 import sys, glob, os
 import numpy as np
@@ -70,6 +70,8 @@ def filter_over_weak(filenames_txt, filenames_png):
 		if (img_exist == 0):		
 			plot_heat_map(data, f_name)		
 
+	return True
+
 def lumin_clean(filenames_dat):
 	"""
 	Function averages luminescence image and subtracts a background. 
@@ -119,4 +121,6 @@ def plot_heat_map(data, filename):
 	plt.savefig(filename + ".png", bbox_inches='tight')
 
 	plt.close()
+	
+	return True
 	
