@@ -27,3 +27,7 @@ setup(
      test_suite = 'scientific_python.e_testing.test_suite',
      keywords = 'science',
 )
+
+if __name__ == '__main__':
+    setup_package()
+    del builtins.__NUMPY_SETUP__
