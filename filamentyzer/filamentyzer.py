@@ -75,7 +75,7 @@ def filter_over_weak(filenames_txt, filenames_png):
 
 def plot_heat_map(data, filename):
 	"""
-	This function plots heat maps of data nupmy 2d array and save result to filename.png.
+	This function plots heat maps of data numpy 2d array and save result to filename.png.
 	"""
 	#heat map plotting
 	plt.xlabel(r'$x$')
